@@ -10,7 +10,7 @@ server:
   tomcat:
     uri-encoding: UTF-8
     
-spring:
+spring:    
   mvc:
     static-path-pattern: /static/**
   datasource:
