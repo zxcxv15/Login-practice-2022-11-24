@@ -60,7 +60,7 @@ button {
     padding-left: 35px;
 }
 
-.sigin-up-btn {
+.signup-btn {
     width: 80px;
     height: 30px;
     background-color: deeppink;
@@ -95,7 +95,7 @@ button {
     padding: 15px;
 }
 
-.siginup-btn {
+.signup-ok-btn {
     width: 80px;
     height: 30px; 
     background-color: deeppink;

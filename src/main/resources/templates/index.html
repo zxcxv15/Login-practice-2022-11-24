@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e740067d1c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/static/css/admin.css">
-    <title>INDEX</title>
+<meta charset="UTF-8">
+<title>Index</title>
+
+<style type="text/css">
+	table {
+		border:1px solid #141414;
+		border-collapse: collapse;
+	}
+	
+	th,td {
+		border:1px solid #141414;
+		padding: 10px;
+		text-align: center;
+	}
+</style>	
 </head>
 <body>
-    <div class="admin-area">
-        <img src="/static/imags/please be patient.png">
-    </div>
-    <script type="text/javascript" src="/static/js/signin.js"></script>
+	<h1>메인페이지</h1>
+	<table>
+		<tr>
+			<th>이름</th>
+			<th>이메일</th>
+			<th>아이디</th>
+			<th>OAuth2아이디</th>
+			<th>비밀번호</th>
+			<th>ROLE</th>
+			<th>PROVIDER</th>
+		</tr>
+		<tr>
+			<td th:text="${principal.user.user_name}"></td>
+			<td th:text="${principal.user.user_email}"></td>
+			<td th:text="${principal.user.user_id}"></td>
+			<td th:text="${principal.user.oauth2_id}"></td>
+			<td th:text="${principal.user.user_password}"></td>
+			<td th:text="${principal.user.user_roles}"></td>
+			<td th:text="${principal.user.user_provider}"></td>
+		</tr>
+	</table>
 </body>
-
 </html>
